@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ios_webviewApp: App {
+    @ObservedObject var viewModel = WebViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WebView(url: "https://dev.yanolja.front.bringprice.com/korail-gate.html", viewModel: viewModel)
         }
     }
 }

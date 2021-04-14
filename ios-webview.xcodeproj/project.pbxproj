@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		349177DF2626887900A024FD /* ios_webviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349177DE2626887900A024FD /* ios_webviewApp.swift */; };
-		349177E12626887900A024FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349177E02626887900A024FD /* ContentView.swift */; };
 		349177E32626887A00A024FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 349177E22626887A00A024FD /* Assets.xcassets */; };
 		349177E62626887A00A024FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 349177E52626887A00A024FD /* Preview Assets.xcassets */; };
-		349177F12626887B00A024FD /* ios_webviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349177F02626887B00A024FD /* ios_webviewTests.swift */; };
-		349177FC2626887B00A024FD /* ios_webviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349177FB2626887B00A024FD /* ios_webviewUITests.swift */; };
+		3491780D26268A5B00A024FD /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491780C26268A5B00A024FD /* WebView.swift */; };
+		3491781226268AF000A024FD /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491781126268AF000A024FD /* WebViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,16 +34,13 @@
 /* Begin PBXFileReference section */
 		349177DB2626887900A024FD /* ios-webview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-webview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		349177DE2626887900A024FD /* ios_webviewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_webviewApp.swift; sourceTree = "<group>"; };
-		349177E02626887900A024FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		349177E22626887A00A024FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		349177E52626887A00A024FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		349177E72626887A00A024FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		349177EC2626887B00A024FD /* ios-webviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-webviewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		349177F02626887B00A024FD /* ios_webviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_webviewTests.swift; sourceTree = "<group>"; };
-		349177F22626887B00A024FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		349177F72626887B00A024FD /* ios-webviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-webviewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		349177FB2626887B00A024FD /* ios_webviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_webviewUITests.swift; sourceTree = "<group>"; };
-		349177FD2626887B00A024FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3491780C26268A5B00A024FD /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		3491781126268AF000A024FD /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				349177DD2626887900A024FD /* ios-webview */,
-				349177EF2626887B00A024FD /* ios-webviewTests */,
-				349177FA2626887B00A024FD /* ios-webviewUITests */,
 				349177DC2626887900A024FD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,10 +90,11 @@
 			isa = PBXGroup;
 			children = (
 				349177DE2626887900A024FD /* ios_webviewApp.swift */,
-				349177E02626887900A024FD /* ContentView.swift */,
 				349177E22626887A00A024FD /* Assets.xcassets */,
 				349177E72626887A00A024FD /* Info.plist */,
 				349177E42626887A00A024FD /* Preview Content */,
+				3491780C26268A5B00A024FD /* WebView.swift */,
+				3491781126268AF000A024FD /* WebViewModel.swift */,
 			);
 			path = "ios-webview";
 			sourceTree = "<group>";
@@ -110,24 +105,6 @@
 				349177E52626887A00A024FD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		349177EF2626887B00A024FD /* ios-webviewTests */ = {
-			isa = PBXGroup;
-			children = (
-				349177F02626887B00A024FD /* ios_webviewTests.swift */,
-				349177F22626887B00A024FD /* Info.plist */,
-			);
-			path = "ios-webviewTests";
-			sourceTree = "<group>";
-		};
-		349177FA2626887B00A024FD /* ios-webviewUITests */ = {
-			isa = PBXGroup;
-			children = (
-				349177FB2626887B00A024FD /* ios_webviewUITests.swift */,
-				349177FD2626887B00A024FD /* Info.plist */,
-			);
-			path = "ios-webviewUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +236,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				349177E12626887900A024FD /* ContentView.swift in Sources */,
+				3491780D26268A5B00A024FD /* WebView.swift in Sources */,
 				349177DF2626887900A024FD /* ios_webviewApp.swift in Sources */,
+				3491781226268AF000A024FD /* WebViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				349177F12626887B00A024FD /* ios_webviewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +253,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				349177FC2626887B00A024FD /* ios_webviewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
